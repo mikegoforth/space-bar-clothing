@@ -5,8 +5,8 @@ import Button from "../button/button.component";
 
 import {
   signInWithGooglePopup,
+  signInAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
-  signInAuthUserWithEmailAndPassword
 } from "../../utils/firebase/firebase.utils";
 
 import "./sign-in-form.styles.scss";
@@ -28,20 +28,18 @@ const SignInForm = () => {
     const { user } = await signInWithGooglePopup();
     await createUserDocumentFromAuth(user);
   };
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormFields({ ...formFields, [name]: value });
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(email, password);
-      console.log(response);
+      await signInAuthUserWithEmailAndPassword(
+        email,
+        password
+      );
       resetFormFields();
     } catch (error) {
-      switch(error.code) {
+      switch (error.code) {
         case "auth/user-not-found":
           alert("No user associated with this email");
           break;
@@ -52,6 +50,11 @@ const SignInForm = () => {
           console.log("User authentication encountered an error", error);
       }
     }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormFields({ ...formFields, [name]: value });
   };
 
   return (
