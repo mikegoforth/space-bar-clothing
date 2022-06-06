@@ -4,13 +4,15 @@
 
 ## About
 
-This app was built in the long twilight hours and late weekends. Coincidingly, this is the first ecommerce app I've built specifically using React. I still have work to do, but I'm happy to share my progress. 🚀
+This app was built over late nights and weekends. Coincidingly, this is the first full blown ecommerce app built specifically demonstrating React. I still have work to do, but I'm happy to share my progress. ✨🛰️
 
 ## Built With
 
-    * [React](https://reactjs.org/)
-    * [Styled Components](https://www.styled-components.com/)
-    * [Netlify](https://www.netlify.com/)
+    * [React](https://reactjs.org/),
+    * [Redux](https://redux.js.org/),
+    * [Styled Components](https://www.styled-components.com/),
+    * [Firebase](https://firebase.google.com/),
+    * [Netlify](https://www.netlify.com/),
 
 ## Available Scripts
 
