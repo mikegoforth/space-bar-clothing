@@ -7,12 +7,10 @@
 This app was built over late nights and weekends. Coincidingly, this is the first full blown ecommerce app built specifically demonstrating React. I still have work to do, but I'm happy to share my progress. ✨🛰️
 
 ## Built With
-
-    * [React](https://reactjs.org/),
-    * [Redux](https://redux.js.org/),
-    * [Styled Components](https://www.styled-components.com/),
-    * [Firebase](https://firebase.google.com/),
-    * [Netlify](https://www.netlify.com/),
+* **Libraries:** [React](https://reactjs.org/), [React Router](https://reacttraining.com/react-router/), [Redux](https://redux.js.org/), [Styled Components](https://www.styled-components.com/)
+* **Middlewares:** [Redux Thunk](https://redux.js.org/docs/api/thunk.html), [Redux Saga](https://redux-saga.js.org/)
+* **Authentication / Database:** [Firebase](https://firebase.google.com/)
+* **CI/CD:** [Netlify](https://www.netlify.com/)
 
 ## Available Scripts
 
