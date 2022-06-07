@@ -1,7 +1,7 @@
-import { compose, createStore, applyMiddleware } from "redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import thunk from "redux-thunk";
 import logger from "redux-logger";
 
 import { rootReducer } from "./root-reducer";
@@ -11,10 +11,10 @@ const persistConfig = {
   storage,
   blacklist: ["user"],
 };
-
 export const store = configureStore({
   reducer: persistReducer(persistConfig, rootReducer),
-  middleware: [logger],
+  // TODO: investigate async actions in ootb thunk. Currently custom import.
+  middleware: [thunk, logger],
   devTools: true
 });
 
