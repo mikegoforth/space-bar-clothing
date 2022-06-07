@@ -9,13 +9,13 @@ import { rootReducer } from "./root-reducer";
 const persistConfig = {
   key: "root",
   storage,
-  blacklist: ["user"],
+  whitelist: ["cart"],
 };
 export const store = configureStore({
   reducer: persistReducer(persistConfig, rootReducer),
   // TODO: investigate async actions in ootb thunk. Currently custom import.
   middleware: [thunk, logger],
-  devTools: true
+  devTools: true,
 });
 
 export const persistor = persistStore(store);
